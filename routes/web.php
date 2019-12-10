@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/DataConnect', function (){
+    return view('connect');
+});
+
+
+Route::get('/connectdb','api\conData@connectdb');
+Route::get('/unsedb','api\conData@inse');

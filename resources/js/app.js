@@ -13,4 +13,7 @@ require('./bootstrap');
  */
 
 require('./components/Example');
-require('./components/Example');
+
+require('./components/DataConnect');
+
+require('./components/ShowData');
