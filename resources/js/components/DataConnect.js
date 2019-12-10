@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import swal from 'sweetalert';
 
+// import '../../css/index.css';
+
 export default class DataConnect extends Component {
 
     render() {
@@ -14,8 +16,6 @@ export default class DataConnect extends Component {
                     <body className="align">
                     <h1> Connect to DATABASE </h1>
 
-
-                    <button className="uk-button uk-button-primary"> <a href="/unsedb" >insert data</a> </button>
 
 
                     <div className="grid">

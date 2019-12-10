@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -19,6 +19,13 @@ Route::get('/DataConnect', function (){
     return view('connect');
 });
 
+Route::get('/Datatable',function (){
+    return view('showTabl');
+});
 
 Route::get('/connectdb','api\conData@connectdb');
 Route::get('/unsedb','api\conData@inse');
+
+Route::get('/selectTable','api\conData@selectTable');
+
+

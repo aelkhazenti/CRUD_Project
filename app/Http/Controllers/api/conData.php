@@ -28,29 +28,43 @@ public function connectdb(){
             setcookie("user",$user);
             setcookie("mdp",$mdp);
 
-
            $conn  = new \mysqli($host, $user, $mdp, $database);
-
 
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "INSERT INTO user  VALUES ('aymane', 'elkha')";
-
-            if ($conn->query($sql) === TRUE) {
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-
-
-
         }else{
-            echo "oooo";
+            echo "entrer votre information ";
         }
 
-        return view('welcome');
+       $this->selectTable();
+
+//        return view('showTabl');
     }
+
+public function selectTable(){
+
+    $host = $_COOKIE['host'];
+    $user= $_COOKIE['user'];
+    $mdp = $_COOKIE['mdp'];
+    $database = $_COOKIE['database'];
+
+    $conn  = new \mysqli($host, $user, $mdp, $database);
+
+
+    $tableList = array();
+    $res = mysqli_query($conn,"SHOW TABLES");
+    while($cRow = mysqli_fetch_array($res))
+    {
+        $tableList[] = $cRow[0];
+
+
+    }
+            print_r($tableList);
+    return $tableList;
+
+}
 
 
     public function inse(Request $request){
