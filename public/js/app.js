@@ -62065,90 +62065,92 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
-        className: "align"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " Connect to DATABASE "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "grid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade",
+        "uk-height-viewport": true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-width-1-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-grid-margin uk-grid uk-grid-stack",
+        "uk-grid": true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-width-1-1@m"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "uk-card-title uk-text-center"
+      }, "Connect to DATABASE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "form login",
         id: "formSub",
         action: "/connectdb",
         method: "GEt"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form__field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "Host"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "uk-icon": "server"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "hidden"
-      }, "Host adress ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "uk-margin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-inline uk-width-1-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uk-form-icon",
+        "uk-icon": "icon: server"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "uk-input uk-form-large",
         id: "Host",
         type: "text",
         name: "Host",
-        className: "form__input",
-        placeholder: "Hostrrr adress",
+        placeholder: "Host adress",
         required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form__field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "database"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "uk-icon": "database"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "hidden"
-      }, "database name ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-inline uk-width-1-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uk-form-icon",
+        "uk-icon": "icon: database"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "uk-input uk-form-large",
         id: "database",
         type: "text",
         name: "database",
-        className: "form__input",
         placeholder: "database name",
         required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form__field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "user"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "uk-icon": "user"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "hidden"
-      }, "user")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-inline uk-width-1-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uk-form-icon",
+        "uk-icon": "icon: user"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "uk-input uk-form-large",
         id: "user",
         type: "text",
         name: "user",
-        className: "form__input",
         placeholder: "user",
         required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form__field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "password"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "uk-icon": "lock"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "hidden"
-      }, "password")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-inline uk-width-1-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uk-form-icon",
+        "uk-icon": "icon: lock"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "uk-input uk-form-large",
         id: "password",
         type: "password",
         name: "password",
-        className: "form__input",
         placeholder: "password",
         required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form__field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "submit",
-        value: "Connect"
-      })))))));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "uk-button uk-button-primary uk-button-large uk-width-1-1",
+        type: "submit"
+      }, "Connect")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-text-small uk-text-center"
+      }, "Not registered? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "Create an account"))))))))));
     }
   }]);
 
@@ -62240,93 +62242,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade",
-        "uk-height-viewport": true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-width-1-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-grid-margin uk-grid uk-grid-stack",
-        "uk-grid": true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-width-1-1@m"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "uk-card-title uk-text-center"
-      }, "Connect to DATABASE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "form login",
-        id: "formSub",
-        action: "/connectdb",
-        method: "GEt"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-inline uk-width-1-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "uk-form-icon",
-        "uk-icon": "icon: server"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "uk-input uk-form-large",
-        id: "Host",
-        type: "text",
-        name: "Host",
-        placeholder: "Host adress",
-        required: true
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-inline uk-width-1-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "uk-form-icon",
-        "uk-icon": "icon: database"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "uk-input uk-form-large",
-        id: "database",
-        type: "text",
-        name: "database",
-        placeholder: "database name",
-        required: true
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-inline uk-width-1-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "uk-form-icon",
-        "uk-icon": "icon: user"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "uk-input uk-form-large",
-        id: "user",
-        type: "text",
-        name: "user",
-        placeholder: "user",
-        required: true
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-inline uk-width-1-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "uk-form-icon",
-        "uk-icon": "icon: lock"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "uk-input uk-form-large",
-        id: "password",
-        type: "password",
-        name: "password",
-        placeholder: "password",
-        required: true
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-margin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-primary uk-button-large uk-width-1-1",
-        type: "submit"
-      }, "Connect")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-text-small uk-text-center"
-      }, "Not registered? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Create an account"))))))))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " exemple work  "));
     }
   }]);
 

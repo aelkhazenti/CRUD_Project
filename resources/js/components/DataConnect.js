@@ -12,88 +12,67 @@ export default class DataConnect extends Component {
         return (
 
             <div className="container">
-                <div className="container">
-                    <body className="align">
-                    <h1> Connect to DATABASE </h1>
+                <div className="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade"
+                     uk-height-viewport>
+                    <div className="uk-width-1-1">
+                        <div className="uk-container">
+                            <div className="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                                <div className="uk-width-1-1@m">
+                                    <div
+                                        className="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                                        <h3 className="uk-card-title uk-text-center">Connect to DATABASE</h3>
+                                        <form  className="form login"  id="formSub" action="/connectdb" method="GEt"  >
+                                            <div className="uk-margin">
+                                                <div className="uk-inline uk-width-1-1">
+                                                    <span className="uk-form-icon" uk-icon="icon: server"></span>
 
+                                                    <input className="uk-input uk-form-large" id="Host" type="text" name="Host"
+                                                           placeholder="Host adress" required
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="uk-margin">
+                                                <div className="uk-inline uk-width-1-1">
+                                                    <span className="uk-form-icon" uk-icon="icon: database"></span>
+                                                    <input className="uk-input uk-form-large" id="database" type="text" name="database"
+                                                           placeholder="database name" required
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="uk-margin">
+                                                <div className="uk-inline uk-width-1-1">
+                                                    <span className="uk-form-icon" uk-icon="icon: user"></span>
+                                                    <input className="uk-input uk-form-large" id="user" type="text" name="user"
+                                                           placeholder="user" required
+                                                    />
+                                                </div>
+                                            </div>
 
-
-                    <div className="grid">
-
-
-
-                        <form className="form login"  id="formSub" action="/connectdb" method="GEt" >
-
-
-                            <div className="form__field">
-                                <label htmlFor="Host">
-                                    <svg className="icon">
-                                        <a uk-icon="server"></a>
-                                    </svg>
-                                    <span className="hidden">Host adress </span></label>
-                                <input id="Host" type="text" name="Host" className="form__input"
-                                       placeholder="Hostrrr adress" required
-
-                                />
+                                            <div className="uk-margin">
+                                                <div className="uk-inline uk-width-1-1">
+                                                    <span className="uk-form-icon" uk-icon="icon: lock"></span>
+                                                    <input className="uk-input uk-form-large" id="password" type="password" name="password"
+                                                           placeholder="password" required/>
+                                                </div>
+                                            </div>
+                                            <div className="uk-margin">
+                                                <button
+                                                    className="uk-button uk-button-primary uk-button-large uk-width-1-1" type="submit" >Connect
+                                                </button>
+                                            </div>
+                                            <div className="uk-text-small uk-text-center">
+                                                Not registered? <a href="#">Create an account</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div className="form__field">
-                                <label htmlFor="database">
-                                    <svg className="icon">
-                                        <a uk-icon="database"></a>
-                                    </svg>
-                                    <span className="hidden">database name </span></label>
-                                <input id="database" type="text" name="database" className="form__input"
-                                       placeholder="database name" required
-
-                                />
-                            </div>
-
-                            <div className="form__field">
-                                <label htmlFor="user">
-                                    <svg className="icon">
-                                        <a uk-icon="user"></a>
-
-                                    </svg>
-                                    <span className="hidden">user</span></label>
-                                <input id="user" type="text" name="user" className="form__input"
-                                       placeholder="user" required
-
-                                />
-                            </div>
-
-
-                            <div className="form__field">
-                                <label htmlFor="password">
-                                    <svg className="icon">
-                                        <a uk-icon="lock"></a>
-                                    </svg>
-                                    <span className="hidden">password</span></label>
-                                <input id="password" type="password" name="password" className="form__input"
-                                       placeholder="password" required
-
-                                />
-                            </div>
-
-
-
-
-                            <div className="form__field">
-                                <input type="submit" value="Connect"   />
-                            </div>
-
-                        </form>
-
-
-
+                        </div>
                     </div>
-                    </body>
-
-
                 </div>
 
-
             </div>
+
 
 
 
