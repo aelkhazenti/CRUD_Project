@@ -17,3 +17,7 @@ require('./components/Example');
 require('./components/DataConnect');
 
 require('./components/ShowData');
+
+require('./components/ShowColomns');
+
+

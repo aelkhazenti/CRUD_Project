@@ -38,7 +38,7 @@ public function connectdb(){
             echo "entrer votre information ";
         }
 
-      $this->selectTable();
+            $this->selectTable();
 
         return view('showTabl');
 
@@ -62,27 +62,36 @@ public function selectTable(){
 
 
     }
+
     $tabyy = $tableList ;
-    return $tableList;
+    return $tabyy;
 
 }
 
 
     public function  descTable (Request $request){
 
+
+    setcookie("tableName",$_GET['tableNom']);
+
+        $this->returnShowdata();
+
+        return view('showColomns');
+
+
+    }
+
+
+    public function returnShowdata(){
+
         $host = $_COOKIE['host'];
         $user= $_COOKIE['user'];
         $mdp = $_COOKIE['mdp'];
         $database = $_COOKIE['database'];
+        $tableName= $_COOKIE['tableName'];
 
         $conn  = new \mysqli($host, $user, $mdp, $database);
 
-if (empty($_GET['tableNom'])){
-    echo "adasda";
-}
-
-
-        $tableName= $_GET['tableNom'];
 
         $tableList = array();
         $res = mysqli_query($conn,"DESC $tableName");
@@ -92,13 +101,18 @@ if (empty($_GET['tableNom'])){
 
 
         }
+
+
+
         $tabyy = $tableList ;
-        return $tableList;
+        return $tabyy;
+
 
 
 
 
     }
+
 
 
 

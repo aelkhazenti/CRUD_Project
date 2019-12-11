@@ -1,49 +1,41 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
+import axios from 'axios'
 import swal from 'sweetalert';
-import axios from 'axios';
+import DataConnect from "./DataConnect";
 
-export default class ShowData extends Component {
+
+export default class ShowColomns extends Component {
 
 
 
     constructor(){
         super();
 
-   this.state= {
-       tables:[],
-       colomns:[]
+        this.state= {
+            colomns:[]
         }
 
-
-
     }
-
 
     componentDidMount() {
-        swal("DATA BASE CONNECT  !", "the database is successfully connected", "success");
 
         axios.get(
-            'http://127.0.0.1:8001/selectTable'
-        ).then(response=>{
-            this.setState({ tables: response.data  });
-            }
+            'http://127.0.0.1:8001/returnShowdata'
+        ).then(colomns=>{
+            this.setState({colomns: colomns.data});
+        })
 
-        )
-
-        console.log(this.state.tables);
 
     }
-
 
     render() {
 
-
-
         return (
 
-            <div className="container"  >
+
+            <div id="container" >
+
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
@@ -68,38 +60,67 @@ export default class ShowData extends Component {
                 </nav>
 
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
 
-                    <div
-                        className="uk-margin-auto uk-margin-auto-vertical uk-width-1-2@s uk-card uk-card-default uk-card-body">
-
-                    <form  action="/desctTable" method="GEt"  >
-                    <div className="uk-margin">
-                        <label className="uk-form-label" htmlFor="form-horizontal-select">Select your tables </label>
-                        <div className="uk-form-controls">
-                            <select className="uk-select uk-form-width-medium " id="form-horizontal-select"  id="tableNom" name="tableNom"
-                                    required >
+                <div className="uk-padding ">
+                <table className="uk-table uk-table-hover uk-table-divider" >
+                    <thead>
+                    <tr>
 
                         {
-                            this.state.tables.map(category=>{
+                            this.state.colomns.map(categ=>{
+
                                 return(
-                                  <option value={category} >{category} </option>
+
+
+                                    <th  >{categ}  </th>
+
 
                                 )
                             })
 
                         }
 
-                </select>
-                            <input className="uk-button uk-button-primary " type="submit" value="connect" />
-            </div>
-                    </div>
-                    </form>
-                    </div>
+                        <th>afficher</th>
+                        <th>modifier</th>
+                        <th>supprimer</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+
+                        {
+                            this.state.colomns.map(categ=>{
+
+                                return(
+                                    <tr>
+
+                                    <th  >{categ}  </th>
+
+                                        <td>    <button className="uk-button uk-button-default" onClick={this.affi} >afficher</button></td>
+                                        <td>    <button className="uk-button uk-button-primary"  >modifier</button></td>
+                                        <td><button className="uk-button uk-button-danger"  >supprimer</button></td>
+
+                                    </tr>
+                                )
+                            })
+
+                        }
+
+
+
+                    </tbody>
+
+
+                </table>
+                </div>
 
 
 
@@ -109,9 +130,11 @@ export default class ShowData extends Component {
 
     }
 
+
 }
 
 
-if (document.getElementById('ShowData')) {
-    ReactDOM.render(<ShowData />, document.getElementById('ShowData'));
+
+if (document.getElementById('ShowColomns')) {
+    ReactDOM.render(<ShowColomns />, document.getElementById('ShowColomns'));
 }
