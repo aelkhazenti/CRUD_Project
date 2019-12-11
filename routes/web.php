@@ -24,8 +24,13 @@ Route::get('/Datatable',function (){
 });
 
 Route::get('/connectdb','api\conData@connectdb');
+
+Route::get('/desctTable','api\conData@descTable');
+
 Route::get('/unsedb','api\conData@inse');
 
 Route::get('/selectTable','api\conData@selectTable');
+
+
 
 

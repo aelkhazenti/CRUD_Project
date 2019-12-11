@@ -62046,7 +62046,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import '../../css/index.css';
+
 
 var DataConnect =
 /*#__PURE__*/
@@ -62064,7 +62064,14 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade",
         "uk-height-viewport": true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -62082,7 +62089,6 @@ function (_Component) {
         className: "uk-card-title uk-text-center"
       }, "Connect to DATABASE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "form login",
-        id: "formSub",
         action: "/connectdb",
         method: "GEt"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -62146,11 +62152,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "uk-button uk-button-primary uk-button-large uk-width-1-1",
         type: "submit"
-      }, "Connect")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-text-small uk-text-center"
-      }, "Not registered? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Create an account"))))))))));
+      }, "Connect"))))))))));
     }
   }]);
 
@@ -62275,7 +62277,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
 /* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -62298,44 +62304,96 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var ShowData =
 /*#__PURE__*/
 function (_Component) {
   _inherits(ShowData, _Component);
 
   function ShowData() {
+    var _this;
+
     _classCallCheck(this, ShowData);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ShowData).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ShowData).call(this));
+    _this.state = {
+      tables: []
+    };
+    return _this;
   }
 
   _createClass(ShowData, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('http://127.0.0.1:8001/selectTable').then(function (response) {
+        _this2.setState({
+          tables: response.data
+        });
+      });
+      console.log(this.state.tables);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _React$createElement;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "uk-padding "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "uk-table uk-table-hover uk-table-divider"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Nom"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Preno"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Addres "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "prix"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "l'etat du commande"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "afficher"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "modifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "supprimer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "elkhewa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "aymane"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "ayyy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "daa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " 141414DH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "daddas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-default",
-        onClick: this.affi
-      }, "afficher")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-primary"
-      }, "modifier")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-danger"
-      }, "supprimer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/login"
-      }, "login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "aymane"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "ayyy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "daa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " 141414DH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "daddas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-default"
-      }, "afficher")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-primary"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
+        integrity: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh",
+        crossOrigin: "anonymous"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://code.jquery.com/jquery-3.4.1.slim.min.js",
+        integrity: "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n",
+        crossOrigin: "anonymous"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js",
+        integrity: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo",
+        crossOrigin: "anonymous"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+        integrity: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6",
+        crossOrigin: "anonymous"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "navbar fixed-top navbar-light bg-light navber-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/login"
-      }, "modifier"), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "uk-button uk-button-danger"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "supprimer"))))))));
+        className: "navbar-brand navber-center",
+        href: "#"
+      }, "CRUD PROJECT ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin-auto uk-margin-auto-vertical uk-width-1-2@s uk-card uk-card-default uk-card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        action: "/desctTable",
+        method: "GEt"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-margin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "uk-form-label",
+        htmlFor: "form-horizontal-select"
+      }, "Select your dataBase "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uk-form-controls"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", (_React$createElement = {
+        className: "uk-select uk-form-width-medium ",
+        id: "form-horizontal-select"
+      }, _defineProperty(_React$createElement, "id", "tableNom"), _defineProperty(_React$createElement, "name", "tableNom"), _defineProperty(_React$createElement, "required", true), _React$createElement), this.state.tables.map(function (category) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: category
+        }, category, " ");
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "uk-button uk-button-primary ",
+        type: "submit",
+        value: "connect"
+      }))))));
     }
   }]);
 

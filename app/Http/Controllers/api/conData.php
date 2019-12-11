@@ -38,9 +38,10 @@ public function connectdb(){
             echo "entrer votre information ";
         }
 
-       $this->selectTable();
+      $this->selectTable();
 
-//        return view('showTabl');
+        return view('showTabl');
+
     }
 
 public function selectTable(){
@@ -61,15 +62,38 @@ public function selectTable(){
 
 
     }
-            print_r($tableList);
+    $tabyy = $tableList ;
     return $tableList;
 
 }
 
 
-    public function inse(Request $request){
+    public function  descTable (Request $request){
+
+        $host = $_COOKIE['host'];
+        $user= $_COOKIE['user'];
+        $mdp = $_COOKIE['mdp'];
+        $database = $_COOKIE['database'];
+
+        $conn  = new \mysqli($host, $user, $mdp, $database);
+
+if (empty($_GET['tableNom'])){
+    echo "adasda";
+}
 
 
+        $tableName= $_GET['tableNom'];
+
+        $tableList = array();
+        $res = mysqli_query($conn,"DESC $tableName");
+        while($cRow = mysqli_fetch_array($res))
+        {
+            $tableList[] = $cRow[0];
+
+
+        }
+        $tabyy = $tableList ;
+        return $tableList;
 
 
 

@@ -2,65 +2,141 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import swal from 'sweetalert';
-
+import axios from 'axios';
 
 export default class ShowData extends Component {
 
+
+
+    constructor(){
+        super();
+
+   this.state= {
+       tables:[]
+        }
+    }
+
+
+    componentDidMount() {
+        axios.get(
+            'http://127.0.0.1:8001/selectTable'
+        ).then(response=>{
+            this.setState({ tables: response.data  });
+            }
+
+        )
+
+        console.log(this.state.tables);
+
+    }
+
+
     render() {
+
+
 
         return (
 
             <div className="container"  >
-
-                <div className="uk-padding ">
-
-                    <table className="uk-table uk-table-hover uk-table-divider">
-                        <thead>
-                        <tr>
-                            <th>Nom</th>
-                            <th>Preno</th>
-                            <th>Email</th>
-                            <th>Addres </th>
-                            <th>prix</th>
-                            <th>l'etat du commande</th>
-                            <th>afficher</th>
-                            <th>modifier</th>
-                            <th>supprimer</th>
-
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr  >
-                            <td>elkhewa</td>
-                            <td>aymane</td>
-                            <td>ayyy</td>
-                            <td>daa</td>
-                            <td> 141414DH</td>
-                            <td>daddas</td>
-                            <td>    <button className="uk-button uk-button-default" onClick={this.affi} >afficher</button></td>
-                            <td>    <button className="uk-button uk-button-primary"  >modifier</button></td>
-                            <td><button className="uk-button uk-button-danger"  >supprimer</button></td>
-
-                        </tr>
-                        <tr  >
-                            <td><a href="/login">login</a></td>
-                            <td>aymane</td>
-                            <td>ayyy</td>
-                            <td>daa</td>
-                            <td> 141414DH</td>
-                            <td>daddas</td>
-                            <td>    <button className="uk-button uk-button-default">afficher</button></td>
-                            <td>    <button className="uk-button uk-button-primary"><a href="/login">modifier</a> </button></td>
-                            <td><button className="uk-button uk-button-danger"  ><a>supprimer</a></button></td>
-
-                        </tr>
-                        </tbody>
-                    </table>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                      crossOrigin="anonymous" />
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                        crossOrigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                        crossOrigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                        crossOrigin="anonymous"></script>
 
 
+                <nav className="navbar fixed-top navbar-light bg-light navber-center"  >
 
-                </div>
+                    <a className="navbar-brand navber-center" href="#" >CRUD PROJECT </a>
+
+                </nav>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+                    <div
+                        className="uk-margin-auto uk-margin-auto-vertical uk-width-1-2@s uk-card uk-card-default uk-card-body">
+
+                    <form  action="/desctTable" method="GEt"  >
+                    <div className="uk-margin">
+                        <label className="uk-form-label" htmlFor="form-horizontal-select">Select your dataBase </label>
+                        <div className="uk-form-controls">
+                            <select className="uk-select uk-form-width-medium " id="form-horizontal-select"  id="tableNom" name="tableNom"
+                                    required >
+
+                        {
+                            this.state.tables.map(category=>{
+                                return(
+                                  <option value={category} >{category} </option>
+
+                                )
+                            })
+
+                        }
+
+                </select>
+                            <input className="uk-button uk-button-primary " type="submit" value="connect" />
+            </div>
+                    </div>
+                    </form>
+                    </div>
+
+
+
+                {/*<form action="/desctTable" method="GEt">*/}
+
+                {/*    <input name="tableNom" placeholder="entrersdf" />*/}
+
+                {/*    <input type="submit" value="connect " />*/}
+                {/*</form>*/}
+
+                    {/*<table className="uk-table uk-table-hover uk-table-divider" >*/}
+                    {/*    <thead>*/}
+                    {/*    <tr>*/}
+
+                    {/*        {*/}
+                    {/*            this.state.tables.map(category=>{*/}
+
+                    {/*                return(*/}
+
+
+                    {/*                    <th  >{category}  </th>*/}
+
+
+                    {/*                )*/}
+                    {/*            })*/}
+
+                    {/*        }*/}
+
+                    {/*                <th>afficher</th>*/}
+                    {/*                <th>modifier</th>*/}
+                    {/*                <th>supprimer</th>*/}
+
+                    {/*    </tr>*/}
+
+                    {/*    </thead>*/}
+
+                    {/*</table>*/}
+
+
+
+
+
+
 
             </div>
 

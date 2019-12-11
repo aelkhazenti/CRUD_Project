@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import swal from 'sweetalert';
 
-// import '../../css/index.css';
 
 export default class DataConnect extends Component {
 
@@ -12,6 +11,10 @@ export default class DataConnect extends Component {
         return (
 
             <div className="container">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+
                 <div className="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade"
                      uk-height-viewport>
                     <div className="uk-width-1-1">
@@ -21,7 +24,7 @@ export default class DataConnect extends Component {
                                     <div
                                         className="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
                                         <h3 className="uk-card-title uk-text-center">Connect to DATABASE</h3>
-                                        <form  className="form login"  id="formSub" action="/connectdb" method="GEt"  >
+                                        <form  className="form login"  action="/connectdb" method="GEt"  >
                                             <div className="uk-margin">
                                                 <div className="uk-inline uk-width-1-1">
                                                     <span className="uk-form-icon" uk-icon="icon: server"></span>
@@ -60,9 +63,7 @@ export default class DataConnect extends Component {
                                                     className="uk-button uk-button-primary uk-button-large uk-width-1-1" type="submit" >Connect
                                                 </button>
                                             </div>
-                                            <div className="uk-text-small uk-text-center">
-                                                Not registered? <a href="#">Create an account</a>
-                                            </div>
+
                                         </form>
                                     </div>
                                 </div>
