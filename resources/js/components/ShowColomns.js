@@ -4,6 +4,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import DataConnect from "./DataConnect";
 
+import Popup from "reactjs-popup";
 
 export default class ShowColomns extends Component {
 
@@ -22,6 +23,7 @@ export default class ShowColomns extends Component {
 
     }
 
+
     componentDidMount() {
         axios.get(
             'http://127.0.0.1:8001/showData'
@@ -35,22 +37,9 @@ export default class ShowColomns extends Component {
             this.setState({colomns: colomns.data});
         });
 
-        this.testtest();
 
     }
 
-
-    testtest(){
-
-console.log("hello");
-
-        this.state.colomns.map(value => {
-            this.araya=value;
-        })
-
-        console.log(this.araya);
-
-    }
 
     render() {
 
@@ -149,10 +138,58 @@ console.log("hello");
 
 
                                             <td>
-                                                <button className="uk-button uk-button-default">afficher</button>
+                                                <Popup modal trigger={<button className="uk-button uk-button-default"  >afficher</button>}  >
+                                                    <form>
+                                                        <fieldset className="uk-fieldset">
+                                                            <legend className="uk-legend">Legend</legend>
+                                                            <div className="uk-margin">
+                                                                {
+                                                                    this.state.colomns.map(hello => {
+                                                                        return (
+                                                                            <tr>
+                                                                                <td> {hello}   :  <input placeholder={hello} />  </td>
+
+
+                                                                            </tr>
+                                                                        )
+                                                                    })
+                                                                }
+
+
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <button className="uk-button uk-button-primary" >Click Me</button>
+                                                    </form>
+
+                                                </Popup>
                                             </td>
                                             <td>
-                                                <button className="uk-button uk-button-primary">modifier</button>
+                                                <Popup modal trigger={<button className="uk-button uk-button-primary" >modifier</button>}  >
+                                                    <form>
+                                                        <fieldset className="uk-fieldset">
+                                                            <legend className="uk-legend">Legend</legend>
+                                                            <div className="uk-margin">
+                                                                {
+                                                                    this.state.colomns.map(hello => {
+                                                                        return (
+                                                                            <tr>
+                                                                                <td> {hello}   :  <input placeholder={hello} />  </td>
+
+
+                                                                            </tr>
+                                                                        )
+                                                                    })
+                                                                }
+
+
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <button className="uk-button uk-button-primary" >Click Me</button>
+                                                    </form>
+
+                                                </Popup>
                                             </td>
                                             <td>
                                                 <button className="uk-button uk-button-danger">supprimer</button>
@@ -174,12 +211,24 @@ console.log("hello");
                     </tbody>
 
 
+
+
                 </table>
-                </div>
+
+
+
+
 
 
 
             </div>
+
+
+                </div>
+
+
+
+
 
         )
 
