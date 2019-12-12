@@ -64081,7 +64081,7 @@ function (_Component) {
           }), "  "));
         }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "uk-button uk-button-primary"
-        }, "Click Me")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, "save")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "uk-button uk-button-danger"
         }, "supprimer")));
       })))));

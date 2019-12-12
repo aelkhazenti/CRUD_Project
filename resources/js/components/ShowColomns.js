@@ -186,7 +186,7 @@ export default class ShowColomns extends Component {
                                                             </div>
                                                         </fieldset>
 
-                                                        <button className="uk-button uk-button-primary" >Click Me</button>
+                                                        <button className="uk-button uk-button-primary" >save</button>
                                                     </form>
 
                                                 </Popup>
