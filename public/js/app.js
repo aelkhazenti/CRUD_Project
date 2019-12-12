@@ -62338,8 +62338,12 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ShowColomns).call(this));
     _this.state = {
+      datas: [],
       colomns: []
     };
+
+    araya: [];
+
     return _this;
   }
 
@@ -62348,17 +62352,32 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8001/showData').then(function (datas) {
+        _this2.setState({
+          datas: datas.data
+        });
+      });
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8001/returnShowdata').then(function (colomns) {
         _this2.setState({
           colomns: colomns.data
         });
       });
+      this.testtest();
+    }
+  }, {
+    key: "testtest",
+    value: function testtest() {
+      var _this3 = this;
+
+      console.log("hello");
+      this.state.colomns.map(function (value) {
+        _this3.araya = value;
+      });
+      console.log(this.araya);
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
-
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -62396,11 +62415,10 @@ function (_Component) {
         className: "uk-table uk-table-hover uk-table-divider"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, this.state.colomns.map(function (categ) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, categ, "  ");
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "afficher"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "modifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "supprimer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.colomns.map(function (categ) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, categ, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "uk-button uk-button-default",
-          onClick: _this3.affi
-        }, "afficher")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "afficher"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "modifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "supprimer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.datas.map(function (value, index, array) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.nom, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.capacite, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.id_a, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.loc, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.ada, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "uk-button uk-button-default"
+        }, "afficher")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "uk-button uk-button-primary"
         }, "modifier")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "uk-button uk-button-danger"

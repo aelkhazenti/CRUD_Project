@@ -39,6 +39,7 @@ Route::get('/selectTable','api\conData@selectTable');
 
 Route::get('/returnShowdata','api\conData@returnShowdata');
 
+Route::get('/showData','api\conData@showData');
 
 
 

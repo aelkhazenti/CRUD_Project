@@ -13,19 +13,42 @@ export default class ShowColomns extends Component {
         super();
 
         this.state= {
-            colomns:[]
+            datas:[],
+            colomns:[],
+
         }
+
+         araya :[] ;
 
     }
 
     componentDidMount() {
+        axios.get(
+            'http://127.0.0.1:8001/showData'
+        ).then( datas=>{
+            this.setState( {datas: datas.data} )
+        } );
 
         axios.get(
-            'http://127.0.0.1:8001/returnShowdata'
+            'http://127.0.0.1:8001/returnShowdata',
         ).then(colomns=>{
             this.setState({colomns: colomns.data});
+        });
+
+        this.testtest();
+
+    }
+
+
+    testtest(){
+
+console.log("hello");
+
+        this.state.colomns.map(value => {
+            this.araya=value;
         })
 
+        console.log(this.araya);
 
     }
 
@@ -77,11 +100,13 @@ export default class ShowColomns extends Component {
                                 return(
 
 
-                                    <th  >{categ}  </th>
+                                    <th  >{categ }  </th>
 
 
                                 )
                             })
+
+
 
                         }
 
@@ -96,24 +121,54 @@ export default class ShowColomns extends Component {
                     <tbody>
 
 
+
                         {
-                            this.state.colomns.map(categ=>{
 
-                                return(
-                                    <tr>
+                                this.state.datas.map((value, index, array) => {
 
-                                    <th  >{categ}  </th>
 
-                                        <td>    <button className="uk-button uk-button-default" onClick={this.affi} >afficher</button></td>
-                                        <td>    <button className="uk-button uk-button-primary"  >modifier</button></td>
-                                        <td><button className="uk-button uk-button-danger"  >supprimer</button></td>
 
-                                    </tr>
-                                )
-                            })
+                                    return (
+
+                                        <tr>
+
+
+                                            {/*==============================================================================*/}
+                                            {/*it's not a diynamic table you need to enter your coloms after value.xxxx*/}
+                                            {/*==============================================================================*/}
+
+                                                <td> {value.nom}  </td>
+                                                <td> {value.capacite}  </td>
+                                                <td> {value.id_a}  </td>
+                                                <td> {value.loc}  </td>
+                                                <td> {value.ada}  </td>
+
+                                            {/*==============================================================================*/}
+                                            {/*==============================================================================*/}
+                                            {/*==============================================================================*/}
+
+
+                                            <td>
+                                                <button className="uk-button uk-button-default">afficher</button>
+                                            </td>
+                                            <td>
+                                                <button className="uk-button uk-button-primary">modifier</button>
+                                            </td>
+                                            <td>
+                                                <button className="uk-button uk-button-danger">supprimer</button>
+                                            </td>
+
+                                        </tr>
+
+                                    )
+
+
+
+
+                                })
+
 
                         }
-
 
 
                     </tbody>

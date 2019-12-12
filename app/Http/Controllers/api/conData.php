@@ -76,6 +76,8 @@ public function selectTable(){
 
         $this->returnShowdata();
 
+        $this->showData();
+
         return view('showColomns');
 
 
@@ -102,14 +104,43 @@ public function selectTable(){
 
         }
 
-
-
         $tabyy = $tableList ;
         return $tabyy;
 
 
 
 
+
+    }
+
+
+    public function showData(){
+
+        $host = $_COOKIE['host'];
+        $user= $_COOKIE['user'];
+        $mdp = $_COOKIE['mdp'];
+        $database = $_COOKIE['database'];
+        $tableName= $_COOKIE['tableName'];
+
+        $conn  = new \mysqli($host, $user, $mdp, $database);
+
+        $tableList = array();
+
+
+            $res = mysqli_query($conn,"Select * from $tableName");
+            while($cRow = mysqli_fetch_object($res))
+            {
+                $tableList[] = $cRow;
+
+
+
+            }
+
+            $listval = $tableList  ;
+
+
+        $tabyy = $listval ;
+        return $tabyy;
 
     }
 
