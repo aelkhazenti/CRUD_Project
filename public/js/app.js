@@ -64064,7 +64064,7 @@ function (_Component) {
           }), "  "));
         }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "uk-button uk-button-primary"
-        }, "Click Me")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        }, "save")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
           modal: true,
           trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             className: "uk-button uk-button-primary"
