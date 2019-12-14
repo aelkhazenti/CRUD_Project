@@ -68,7 +68,16 @@ export default class ShowColomns extends Component {
                 <nav className="navbar fixed-top navbar-light bg-light navber-center"  >
 
                     <a className="navbar-brand navber-center" href="#" >CRUD PROJECT </a>
+                    <form className="form-inline my-2 my-lg-0">
 
+
+                        <div className="uk-margin">
+                            <div className="uk-inline uk-width-1-1">
+                                <a href="/" className="w3-bar-item w3-button"><i className="fa fa-sign-in"></i> Deconnecter </a>
+                            </div>
+                        </div>
+
+                    </form>
                 </nav>
 
 
@@ -124,7 +133,7 @@ export default class ShowColomns extends Component {
                                             }
 
                                             <td>
-                                                <Popup modal trigger={<button className="uk-button uk-button-default"  >afficher</button>}  >
+                                                <Popup modal trigger={<button class="btn btn-light btn-lg"  >afficher</button>}  >
                                                     <form>
                                                         <fieldset className="uk-fieldset">
                                                             <legend className="uk-legend">Legend</legend>
@@ -151,7 +160,8 @@ export default class ShowColomns extends Component {
                                                 </Popup>
                                             </td>
                                             <td>
-                                                <Popup modal trigger={<button className="uk-button uk-button-primary" >modifier</button>}  >
+                                                <Popup modal trigger={<button type="button"
+                                                                              className="btn btn-warning btn-lg">modifier</button>}  >
                                                     <form>
                                                         <fieldset className="uk-fieldset">
                                                             <legend className="uk-legend">Legend</legend>
@@ -178,7 +188,7 @@ export default class ShowColomns extends Component {
                                                 </Popup>
                                             </td>
                                             <td>
-                                                <button className="uk-button uk-button-danger">supprimer</button>
+                                                <button class="btn btn-danger btn-lg">supprimer</button>
                                             </td>
 
                                         </tr>

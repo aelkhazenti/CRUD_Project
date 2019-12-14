@@ -64,7 +64,16 @@ export default class ShowData extends Component {
                 <nav className="navbar fixed-top navbar-light bg-light navber-center"  >
 
                     <a className="navbar-brand navber-center" href="#" >CRUD PROJECT </a>
+                    <form className="form-inline my-2 my-lg-0">
 
+
+                        <div className="uk-margin">
+                            <div className="uk-inline uk-width-1-1">
+                                <a href="/" className="w3-bar-item w3-button"><i className="fa fa-sign-in"></i> Deconnecter </a>
+                            </div>
+                        </div>
+
+                    </form>
                 </nav>
 
 
