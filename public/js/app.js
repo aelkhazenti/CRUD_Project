@@ -64047,7 +64047,9 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, this.state.colomns.map(function (categ) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, categ, "  ");
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "afficher"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "modifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "supprimer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.datas.map(function (value, index, array) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.nom, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.capacite, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.id_a, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.loc, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", value.ada, "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, _this3.state.colomns.map(function (categ) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, value[categ], "  ");
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
           modal: true,
           trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             className: "uk-button uk-button-default"

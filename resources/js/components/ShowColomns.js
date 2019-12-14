@@ -110,32 +110,18 @@ export default class ShowColomns extends Component {
                     <tbody>
 
 
-
                         {
-
                                 this.state.datas.map((value, index, array) => {
-
-
-
                                     return (
-
                                         <tr>
+                                            {
+                                                this.state.colomns.map(categ=>{
+                                                    return(
+                                                        <td  >{value[categ]}  </td>
+                                                    )
+                                                })
 
-
-                                            {/*==============================================================================*/}
-                                            {/*it's not a diynamic table you need to enter your coloms after value.xxxx*/}
-                                            {/*==============================================================================*/}
-
-                                                <td> {value.nom}  </td>
-                                                <td> {value.capacite}  </td>
-                                                <td> {value.id_a}  </td>
-                                                <td> {value.loc}  </td>
-                                                <td> {value.ada}  </td>
-
-                                            {/*==============================================================================*/}
-                                            {/*==============================================================================*/}
-                                            {/*==============================================================================*/}
-
+                                            }
 
                                             <td>
                                                 <Popup modal trigger={<button className="uk-button uk-button-default"  >afficher</button>}  >
