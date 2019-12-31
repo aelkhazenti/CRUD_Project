@@ -64073,11 +64073,9 @@ function (_Component) {
           className: "uk-margin"
         }, _this3.state.colomns.map(function (hello) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", hello, "   :  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-            placeholder: hello
+            placeholder: value[hello]
           }), "  "));
-        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "uk-button uk-button-primary"
-        }, "save")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
           modal: true,
           trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             type: "button",
@@ -64091,7 +64089,7 @@ function (_Component) {
           className: "uk-margin"
         }, _this3.state.colomns.map(function (hello) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", hello, "   :  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-            placeholder: hello
+            placeholder: value[hello]
           }), "  "));
         }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "uk-button uk-button-primary"

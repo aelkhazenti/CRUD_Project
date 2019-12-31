@@ -142,7 +142,7 @@ export default class ShowColomns extends Component {
                                                                     this.state.colomns.map(hello => {
                                                                         return (
                                                                             <tr>
-                                                                                <td> {hello}   :  <input placeholder={hello} />  </td>
+                                                                                <td> {hello}   :  <input placeholder={value[hello]} />  </td>
 
 
                                                                             </tr>
@@ -154,7 +154,7 @@ export default class ShowColomns extends Component {
                                                             </div>
                                                         </fieldset>
 
-                                                        <button className="uk-button uk-button-primary" >save</button>
+                                                        {/*<button className="uk-button uk-button-primary" >save</button>*/}
                                                     </form>
 
                                                 </Popup>
@@ -170,7 +170,7 @@ export default class ShowColomns extends Component {
                                                                     this.state.colomns.map(hello => {
                                                                         return (
                                                                             <tr>
-                                                                                <td> {hello}   :  <input placeholder={hello} />  </td>
+                                                                                <td> {hello}   :  <input placeholder={value[hello]} />  </td>
 
 
                                                                             </tr>
