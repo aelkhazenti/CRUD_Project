@@ -46,20 +46,20 @@ Laravel is a web application framework with expressive, elegant syntax. Laravel 
 
 <blockquote>
 <p>:one: <br>
-npm install  </p>
+$ npm install  </p>
 </blockquote>
 
-:::
+
 this commande install node_modules package :ballot_box_with_check:
 
 <blockquote>
 <p> :two: <br>
-    php artisane serve </p>
+    $ php artisane serve </p>
 </blockquote>
 
 <blockquote>
 <p>:three:<br> 
-    npm run watch </p>
+    $ npm run watch </p>
 
 
 
