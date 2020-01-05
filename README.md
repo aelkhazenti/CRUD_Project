@@ -95,6 +95,7 @@ this commande install node_modules package :ballot_box_with_check:
 <iframe width="700" height="480" src="https://www.youtube.com/embed/X-Z4QFncyHA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+|YOUTUBE:[$vid=X-Z4QFncyHA $max_width=450, $ratings=N, $views=N, $border=N, $title=N, $trim_border=N]|
 
 
 ###### tags: `CRUD` `dynamic CRUD`
