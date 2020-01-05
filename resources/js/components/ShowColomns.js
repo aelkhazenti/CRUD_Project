@@ -10,6 +10,7 @@ export default class ShowColomns extends Component {
 
 
 
+
     constructor(){
         super();
 
@@ -142,7 +143,7 @@ export default class ShowColomns extends Component {
                                                                     this.state.colomns.map(hello => {
                                                                         return (
                                                                             <tr>
-                                                                                <td> {hello}   :  <input placeholder={value[hello]} />  </td>
+                                                                                <td> {hello}   :  <input placeholder={value[hello]} disabled/>  </td>
 
 
                                                                             </tr>
@@ -162,9 +163,9 @@ export default class ShowColomns extends Component {
                                             <td>
                                                 <Popup modal trigger={<button type="button"
                                                                               className="btn btn-warning btn-lg">modifier</button>}  >
-                                                    <form>
+                                                    <form  action="" method="" id="modification"  >
                                                         <fieldset className="uk-fieldset">
-                                                            <legend className="uk-legend">Legend</legend>
+                                                            <legend className="uk-legend">modification</legend>
                                                             <div className="uk-margin">
                                                                 {
                                                                     this.state.colomns.map(hello => {
@@ -182,13 +183,39 @@ export default class ShowColomns extends Component {
                                                             </div>
                                                         </fieldset>
 
-                                                        <button className="uk-button uk-button-primary" >save</button>
+                                                        <button className="uk-button uk-button-primary" value="" >save</button>
                                                     </form>
 
                                                 </Popup>
                                             </td>
                                             <td>
-                                                <button class="btn btn-danger btn-lg">supprimer</button>
+                                                <Popup modal trigger={<button type="button"
+                                                                              className="btn btn-danger btn-lg">supprimer</button>}  >
+                                                    <form  action="/deleteData" method="GEt" id="modification"  >
+                                                        <fieldset className="uk-fieldset">
+                                                            <legend className="uk-legend">suppresion</legend>
+                                                            <div className="uk-margin">
+                                                                {
+                                                                    this.state.colomns.map(hello => {
+                                                                        return (
+                                                                            <tr>
+                                                                                <td  > {hello}   :  <input value={value[hello]} name="dataName" id="dataName"   />  </td>
+
+
+                                                                            </tr>
+                                                                        )
+
+                                                                    })
+                                                                }
+
+
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <button className="uk-button uk-button-primary" type="submit" >supprimerrr</button>
+                                                    </form>
+
+                                                </Popup>
                                             </td>
 
                                         </tr>

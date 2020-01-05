@@ -92,6 +92,7 @@ public function selectTable(){
         $database = $_COOKIE['database'];
         $tableName= $_COOKIE['tableName'];
 
+
         $conn  = new \mysqli($host, $user, $mdp, $database);
 
 

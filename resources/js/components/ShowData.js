@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
+
 import swal from 'sweetalert';
 import axios from 'axios';
 

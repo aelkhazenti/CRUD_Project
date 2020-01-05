@@ -31,6 +31,7 @@ Route::get('/Datacolomns',function (){
 
 Route::get('/connectdb','api\conData@connectdb');
 
+
 Route::get('/desctTable','api\conData@descTable');
 
 Route::get('/unsedb','api\conData@inse');
@@ -41,5 +42,5 @@ Route::get('/returnShowdata','api\conData@returnShowdata');
 
 Route::get('/showData','api\conData@showData');
 
-
+Route::get('/deleteData','api\operationCRUD@deletteData');
 
